@@ -58,8 +58,8 @@ void modechange() {
 
 void nightLight(uint32_t color, int wait) {
   for(int i=0; i<strip.numPixels(); i++) { 
-    if (i > 46 && i < 87 && millis() - last_interrupt_time < 3600000) { //E
-//    if (i > 115 && millis() - last_interrupt_time < 3600000) { //A
+//    if (i > 46 && i < 87 && millis() - last_interrupt_time < 3600000) { //A
+    if (i > 115 && millis() - last_interrupt_time < 3600000) { //E
       strip.setPixelColor(i, color);}    
     else {strip.setPixelColor(i, strip.Color(  0,   0, 0));}
     strip.show();     
