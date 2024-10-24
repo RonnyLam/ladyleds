@@ -22,22 +22,19 @@ void loop() {
         case 0:
           colorWipe(strip.Color(  150,   127,   48), 10); //White
           break;
-        case 5:
+        case 6:
           rainbow(10);
           break;
-        case 4:
+        case 5:
           colorWipe(strip.Color(  0,   0, 255), 10);    // Blue
           break;
-        case 2:
+        case 3:
           colorWipe(strip.Color(  255,   0, 0), 10);    // Red
           break;
-        case 6:   
-          theaterChaseRainbow(50);
+        case 2:   
+          colorWipe(strip.Color(  255,   165, 0), 10);    // Orange
           break;
-        case 7:   
-          colorWipe(strip.Color(  255,   20, 147), 10);    // Pink
-          break;
-        case 3:   
+        case 4:   
           colorWipe(strip.Color(  128,   0, 255), 10);    // Purple
           break;
         case 1:   
@@ -59,7 +56,7 @@ void modechange() {
 void nightLight(uint32_t color, int wait) {
   for(int i=0; i<strip.numPixels(); i++) { 
 //    if (i > 46 && i < 87 && millis() - last_interrupt_time < 3600000) { //A
-    if (i > 115 && millis() - last_interrupt_time < 3600000) { //E
+    if (i < 75 && i%2 == 0 && millis() - last_interrupt_time < 3600000) { //E
       strip.setPixelColor(i, color);}    
     else {strip.setPixelColor(i, strip.Color(  0,   0, 0));}
     strip.show();     
