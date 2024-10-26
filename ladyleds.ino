@@ -32,7 +32,7 @@ void loop() {
           colorWipe(strip.Color(  255,   0, 0), 10);    // Red
           break;
         case 2:   
-          colorWipe(strip.Color(  255,   165, 0), 10);    // Orange
+          colorWipe(strip.Color(  255,   115, 0), 10);    // Orange
           break;
         case 4:   
           colorWipe(strip.Color(  128,   0, 255), 10);    // Purple
